@@ -1,0 +1,39 @@
+{
+  "name": "token-gating",
+  "version": "0.1.0",
+  "description": "Token gating program for Solana",
+  "license": "MIT",
+  "scripts": {
+    "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
+    "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
+    "test": "anchor test",
+    "client": "ts-node app/index.ts",
+    "cli": "ts-node app/cli-client.ts",
+    "js-client": "node app/cli-client.js",
+    "build": "anchor build",
+    "start": "anchor test --skip-build --skip-deploy"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.0",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.0",
+    "dotenv": "^8.2.0",
+    "fastestsmallesttextencoderdecoder": "^1.0.22",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.13.14",
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0",
+    "ts-mocha": "^11.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
